@@ -8,10 +8,15 @@ const app = express()
 dotenv.config()
 
 app.use(express.json())
-app.use(cors({
-    origin: `${process.env.FRONTEND_URL}`,
-    methods: ["GET", "POST", "PUT", "DELETE"]
-}))
+
+const allowedOrigin = process.env.FRONTEND_URL || "http://localhost:5173"; // Default for local dev
+app.use(
+  cors({
+    origin: allowedOrigin,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // If using cookies or authentication
+  })
+);
 
 app.use('/api/v1', mainRouter)
 

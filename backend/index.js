@@ -1,12 +1,15 @@
 import express from 'express'
+import dotenv from 'dotenv'
 import mainRouter from './routes/index.js'
 import cors from 'cors'
 
 const app = express()
 
+dotenv.config()
+
 app.use(express.json())
 app.use(cors({
-    origin: `${import.meta.env.FRONTEND_URL}`
+    origin: `${process.env.FRONTEND_URL}`
 }))
 
 app.use('/api/v1', mainRouter)

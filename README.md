@@ -16,4 +16,5 @@ A fast, secure, and user-friendly payments app for seamless digital transactions
 ### Backend  
 1. Clone the repository:  
    git clone https://github.com/your-username/pay-ease.git
+   
    cd pay-ease/backend

@@ -9,14 +9,9 @@ dotenv.config()
 
 app.use(express.json())
 
-const allowedOrigin = process.env.FRONTEND_URL || "http://localhost:5173"; // Default for local dev
-app.use(
-  cors({
-    origin: allowedOrigin,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // If using cookies or authentication
-  })
-);
+const allowedOrigins = [process.env.FRONTEND_URL || "http://localhost:5173"];
+
+app.use(cors({}));
 
 app.use('/api/v1', mainRouter)
 

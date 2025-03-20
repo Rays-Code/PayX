@@ -28,7 +28,7 @@ const Signin = () => {
       alert('All fields are required!')
     }
     else{
-    const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}api/v1/user/signin`, {
+    const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}/api/v1/user/signin`, {
       username,
       password
     })

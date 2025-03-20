@@ -10,7 +10,7 @@ const AppBar = () => {
 
      useEffect(() => {
          const fetch2 = async () => {
-             const res = await axios.get(`${import.meta.env.VITE_BACKEND_BASEURL}api/v1/user/info`, {
+             const res = await axios.get(`${import.meta.env.VITE_BACKEND_BASEURL}/api/v1/user/info`, {
                  headers: {
                      'Authorization': 'Bearer ' + localStorage.getItem('token')
                  }

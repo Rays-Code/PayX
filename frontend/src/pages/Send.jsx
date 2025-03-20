@@ -41,7 +41,7 @@ const Send = () => {
                             }} value={amount} type='number' id='amount' placeholder='Enter amount' className='flex h-10 w-full rounded-md border border-slate-200 px-3 py-2 text-sm' />
                         </div>
                         <button to={'send'} firtName={name} id={id} onClick={async () => {
-                            await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}api/v1/account/transfer`, {
+                            await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}/api/v1/account/transfer`, {
                                 to: id,
                                 amount: amount
                             }, {

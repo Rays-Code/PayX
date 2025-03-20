@@ -33,7 +33,7 @@ const Signup = () => {
       return;
     } 
     else {
-      const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}api/v1/user/signup`, {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}/api/v1/user/signup`, {
         firstName,
         lastName,
         username,

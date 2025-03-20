@@ -13,7 +13,7 @@ const Users = () => {
 
     useEffect(() => {
         const fetch = async () => {
-        const response = await axios.get(`${import.meta.env.VITE_BACKEND_BASEURL}/api/v1/user/bulk?filter=` + filter)
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_BASEURL}api/v1/user/bulk?filter=` + filter)
         setUsers(response.data.users)
         }
 

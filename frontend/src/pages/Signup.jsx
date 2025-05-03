@@ -40,7 +40,12 @@ const Signup = () => {
         username,
         password
       })
-      localStorage.setItem("token", response.data.token)
+      if (response.data.token) {
+        localStorage.setItem('token', response.data.token)
+        navigate('/dashboard') // optional: redirect after signup
+      } else {
+        alert('Token not received!')
+      }
     }
   }
 

@@ -33,8 +33,12 @@ const Signin = () => {
       username,
       password
     })
+    if(!response.data.token){
       localStorage.setItem("token", response.data.token)
       navigate('/dashboard')
+    } else{
+      alert("User doesn't exists")
+    }
  
     }
   }

@@ -1,54 +1,32 @@
-import React, { use } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Logo from '../components/Logo'
 
 const Home = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
   return (
-    <div className="h-full bg-[url('/assets/4864051.jpg')] bg-cover">
-
-        <div onClick={() => navigate('/')} className='h-14 flex justify-between'>
-        <div className='flex flex-col justify-center cursor-pointer h-full pb-4 ml-6 mt-6 text-5xl text-white font-bold'>
-            PayEase
-        </div>  
-        </div>
-
-
-    <div className="relative min-h-screen flex flex-col items-center justify-center text-white">
-    {/* Background Overlay */}
-
-
-    {/* Card Container */}
-    <div className="relative bg-opacity-50 backdrop-blur-lg p-6 rounded-xl shadow-lg max-w-md text-center">
-      <h2 className="text-3xl font-bold text-white">Seamless Payments</h2>
-      <p className="mt-2 text-lg text-white">Fast, secure, and hassle-free transactions at your fingertips.</p>
-
-      {/* Dummy Features */}
-      <div className="mt-4 space-y-3">
-        <div className="flex items-center space-x-2">
-          <span className="text-xl">✅</span>
-          <p>Instant Transfers</p>
-        </div>
-        <div className="flex items-center space-x-2">
-          <span className="text-xl">🔒</span>
-          <p>Bank-Level Security</p>
-        </div>
-        <div className="flex items-center space-x-2">
-          <span className="text-xl">📱</span>
-          <p>Mobile-Friendly</p>
-        </div>
+    <div className="h-screen w-screen bg-gradient-to-b from-black to-gray-800 relative overflow-hidden">
+      
+      {/* Top Bar (Logo + Button) absolutely positioned */}
+      <div className="absolute top-0 left-0 w-full flex justify-between items-center p-5 z-10">
+        <Logo />
+        <button type="button" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        onClick={() => {
+          navigate("/signup")
+        }}>
+          Get Started</button>
       </div>
 
-      {/* Button */}
-      <button onClick={() => {
-        navigate('/signup')
-      }} className="mt-4 cursor-pointer bg-white text-black px-6 py-2 rounded-lg hover:bg-purple-500 transition">
-        Get Started
-      </button>
+      {/* Centered Text */}
+      <div className="flex h-full w-full items-center justify-center">
+        <div className="flex flex-col text-white text-8xl font-poppins font-semibold text-center drop-shadow-xl">
+          <div className="p-2">Payments</div>
+          <div className="p-2">made effortless, secure</div>
+          <div className="p-2">lightning fast.</div>
+        </div>
+      </div>
     </div>
-  </div>
-    </div>
-    
   )
 }
 

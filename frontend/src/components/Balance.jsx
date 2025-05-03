@@ -35,7 +35,7 @@ const Balance = ({value}) => {
         </div>
         </div>
         <div>
-        <button type="button" onClick={handleLogout} className="focus:outline-none text-white cursor-pointer active:scale-95 bg-blue-600 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Log out</button>
+        <button type="button" onClick={handleLogout} className="focus:outline-none text-white cursor-pointer active:scale-95 bg-red-600 hover:bg-red-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Log out</button>
         </div>
         
     </div>

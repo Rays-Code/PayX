@@ -16,7 +16,7 @@ const Dashboard = () => {
   }, [])
 
   return (
-    <div className="h-full bg-[url('/assets/4864051.jpg')] bg-cover">
+    <div className="h-screen w-screen bg-gradient-to-b from-black to-gray-800 relative overflow-hidden">
         <AppBar />
         <Balance value={'10,000'} />
         <Users />

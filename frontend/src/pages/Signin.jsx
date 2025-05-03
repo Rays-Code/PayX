@@ -6,6 +6,7 @@ import SubHeading from '../components/SubHeading'
 import InputBox from '../components/InputBox'
 import Button from '../components/Button'
 import BottomWarning from '../components/BottomWarning'
+import Logo from '../components/Logo'
 
 const Signin = () => {
 
@@ -42,10 +43,10 @@ const Signin = () => {
 
 
   return (
-    <div className="h-full bg-[url('/assets/4864051.jpg')] bg-cover">
+    <div className="h-screen w-screen bg-gradient-to-b from-black to-gray-800 relative overflow-hidden">
         <div className='h-14 flex justify-between' onClick={() => navigate('/')}>
-        <div className='flex flex-col justify-center cursor-pointer h-full ml-6 mt-4 text-5xl text-white font-bold'>
-            PayEase
+        <div className='flex flex-col justify-center cursor-pointer h-full m-5 mt-7 text-5xl text-white font-bold'>
+            <Logo />
         </div>
         </div>
 

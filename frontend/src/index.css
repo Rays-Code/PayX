@@ -1,1 +1,14 @@
+@font-face{
+    font-family: Poppins;
+    src: url("../public/assets/fonts/Poppins-Medium.ttf");
+}
+
 @import "tailwindcss";
+
+@theme{
+    --font-poppins: Poppins, "sans-serif";
+    --color-navy: #27005D;
+    --color-neon: #9400FF;
+    --color-sky: #AED2FF;
+    --color-ice: #E4F1FF;
+}

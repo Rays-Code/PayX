@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Logo from './Logo'
 
 
 const AppBar = () => {
@@ -22,8 +23,8 @@ const AppBar = () => {
      }, [])
   return (
     <div className='h-14 flex justify-between'>
-        <div onClick={() => navigate('/')} className='flex flex-col justify-center cursor-pointer h-full ml-4 shadow-white-600 text-4xl text-white font-bold'>
-            PayEase
+        <div onClick={() => navigate('/')} className='flex flex-col justify-center cursor-pointer h-full m-3 shadow-white-600 text-4xl text-white font-bold'>
+            <Logo />
         </div>
         <div className='flex cursor-pointer'>
             <div className='flex text-white font-medium flex-col text-lg justify-center h-full mr-4'>

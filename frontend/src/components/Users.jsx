@@ -46,7 +46,7 @@ const User = ({user}) => {
     return (
         <div className='flex justify-between'>
             <div className='flex cursor-pointer'>
-                <div className='rounded-full h-12 w-12 bg-white text-black flex justify-center mt-1 mr-2'>
+                <div className='rounded-full h-12 w-12 bg-ice border-3 border-blue-500 text-black flex justify-center mt-1 mr-2'>
                     <div className='flex flex-col justify-center h-full text-xl'>
                         {user.firstName[0]}
                     </div>

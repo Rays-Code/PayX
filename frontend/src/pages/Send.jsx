@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Logo from '../components/Logo'
 
 
 const Send = () => {
@@ -13,10 +14,10 @@ const Send = () => {
     const navigate = useNavigate()
 
   return (
-    <div className="bg-[url('/assets/4864051.jpg')] bg-cover">
+    <div className="h-screen w-screen bg-gradient-to-b from-black to-gray-800 relative overflow-hidden">
         <div className='h-14 flex justify-between' onClick={() => navigate('/')}>
         <div className='flex flex-col justify-center cursor-pointer h-full ml-6 mt-4 text-5xl text-white font-bold'>
-            PayEase
+            <Logo />
         </div>
         </div>
 
@@ -28,8 +29,8 @@ const Send = () => {
                 </div>
                 <div className='p-6'>
                     <div className='flex items-center space-x-4'>
-                        <div className='w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center'>
-                            <span className='text-2xl text-white'>{name[0]}</span>
+                        <div className='w-12 h-12 rounded-full bg-sky flex items-center justify-center border-4 border-blue-400'>
+                            <span className='text-2xl text-black'>{name[0]}</span>
                         </div>
                         <h3 className='text-2xl font-semibold'>{name}</h3>
                     </div>
@@ -50,7 +51,7 @@ const Send = () => {
                                 }
                             })
                             navigate('/transactionsuccess')
-                        }} className='justify-center cursor-pointer active:scale-95 rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-black text-white'>
+                        }} className='justify-center cursor-pointer active:scale-95 rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-gradient-to-r from-green-400 via-green-400 to-green-500 text-white'>
                             Initiate Transfer</button>
                     </div>
                 </div>  

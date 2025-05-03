@@ -7,6 +7,7 @@ import SubHeading from '../components/SubHeading'
 import InputBox from '../components/InputBox'
 import Button from '../components/Button'
 import BottomWarning from '../components/BottomWarning'
+import Logo from '../components/Logo'
 
 const Signup = () => {
 
@@ -45,40 +46,32 @@ const Signup = () => {
 
 
   return (
-    <div className="h-full bg-[url('/assets/4864051.jpg')] bg-cover">
+    <div className="h-screen w-screen bg-gradient-to-b from-black to-gray-800 relative overflow-hidden">
 
         <div onClick={() => navigate('/')} className='h-14 flex justify-between'>
-        <div className='flex flex-col justify-center cursor-pointer h-full ml-6 mt-4 text-5xl text-white font-bold'>
-            PayEase
+        <div className='flex flex-col justify-center cursor-pointer h-full m-5 mt-7 text-5xl text-white font-bold'>
+            <Logo />
         </div>
         </div>
 
-        <div className='h-screen flex justify-center'>
-        <div className='flex flex-col justify-center'>
-            <div className='rounded-lg bg-white w-80 text-center p-2 h-max px-4 shadow-lg'>
-                <Heading label={'Sign up'}/>
-                <SubHeading label={'Enter your information to create your account'}/>
-                <InputBox onChange={e => {
-                  setfirstName(e.target.value)
-                }} value={firstName} label={'First Name'} placeholder={'John'}/>
-                <InputBox onChange={e => {
-                  setlastName(e.target.value)
-                }} value={lastName} label={'Last Name'} placeholder={'Doe'}/>
-                <InputBox onChange={e => {
-                  setUsername(e.target.value)
-                }} value={username} label={'Email'} placeholder={'john@gmail.com'}/>
-                <InputBox onChange={e => {
-                  setPassword(e.target.value)
-                }} value={password} label={'Password'} placeholder={'123456'}/>
-                <div className='pt-4'>
-                    <Button to={shouldNavigate? 'signup': 'dashboard'} func={POST} tColor={'white'} bColor={'black'} label={'Sign up'}/>
-                </div>
-                <BottomWarning label={'Already have an account?'} buttonText={'Sign in'} to={'/signin'}/>
-            </div>
-        </div>
+        <div className='h-screen flex items-center justify-center'>
+  <div className='rounded-lg bg-white w-80 text-center p-2 h-max px-4 shadow-lg'>
+    <Heading label={'Sign up'} />
+    <SubHeading label={'Enter your information to create your account'} />
+    <InputBox onChange={e => setfirstName(e.target.value)} value={firstName} label={'First Name'} placeholder={'John'} />
+    <InputBox onChange={e => setlastName(e.target.value)} value={lastName} label={'Last Name'} placeholder={'Doe'} />
+    <InputBox onChange={e => setUsername(e.target.value)} value={username} label={'Email'} placeholder={'john@gmail.com'} />
+    <InputBox onChange={e => setPassword(e.target.value)} value={password} label={'Password'} placeholder={'123456'} />
+    <div className='pt-4'>
+      <Button to={shouldNavigate ? 'signup' : 'dashboard'} func={POST} tColor={'white'} bColor={'black'} label={'Sign up'} />
+    </div>
+    <BottomWarning label={'Already have an account?'} buttonText={'Sign in'} to={'/signin'} />
+  </div>
+</div>
+
 
     </div>
-    </div>
+
 
   )
 }
